@@ -24,6 +24,7 @@ public class Fragment_Login extends Fragment {
         View register = view.findViewById(R.id.buttonLoginRegister);
 
         register.setOnClickListener(v ->{
+
             Navigation.findNavController(v).navigate(R.id.action_fragment_Login_to_fragment_Register);
         });
 
