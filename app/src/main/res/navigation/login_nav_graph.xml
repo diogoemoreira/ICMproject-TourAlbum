@@ -9,10 +9,13 @@
         android:id="@+id/fragment_Login"
         android:name="pt.aulasicm.touralbum.Fragment_Login"
         android:label="fragment__login"
-        tools:layout="@layout/fragment__login" >
+        tools:layout="@layout/fragment__login"
+        app:startDestination="@id/action_fragment_Login_to_fragment_Register">
         <action
             android:id="@+id/action_fragment_Login_to_fragment_Register"
-            app:destination="@id/fragment_Register" />
+            app:destination="@id/fragment_Register"
+            app:enterAnim="@anim/fragment_close_enter"
+            app:exitAnim="@anim/fragment_close_exit" />
     </fragment>
     <fragment
         android:id="@+id/fragment_Register"
