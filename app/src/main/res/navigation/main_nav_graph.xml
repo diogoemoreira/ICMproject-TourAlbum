@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="utf-8"?>
+<navigation xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/main_nav_graph"
+    app:startDestination="@id/fragment_Profile">
+    <fragment
+        android:id="@+id/fragment_Profile"
+        android:name="pt.aulasicm.touralbum.Fragment_Profile"
+        android:label="fragment__profile"
+        tools:layout="@layout/fragment__profile" >
+        <action
+            android:id="@+id/action_fragment_Profile_to_fragment_Gallery"
+            app:destination="@id/fragment_Gallery" />
+        <action
+            android:id="@+id/action_fragment_Profile_to_fragment_Map"
+            app:destination="@id/fragment_Map" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_Gallery"
+        android:name="pt.aulasicm.touralbum.Fragment_Gallery"
+        android:label="fragment__gallery"
+        tools:layout="@layout/fragment__gallery" >
+        <action
+            android:id="@+id/action_fragment_Gallery_to_fragment_Profile"
+            app:destination="@id/fragment_Profile" />
+        <action
+            android:id="@+id/action_fragment_Gallery_to_fragment_Map"
+            app:destination="@id/fragment_Map" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_Map"
+        android:name="pt.aulasicm.touralbum.Fragment_Map"
+        android:label="fragment__map"
+        tools:layout="@layout/fragment__map" >
+        <action
+            android:id="@+id/action_fragment_Map_to_fragment_Gallery"
+            app:destination="@id/fragment_Gallery" />
+        <action
+            android:id="@+id/action_fragment_Map_to_fragment_Profile"
+            app:destination="@id/fragment_Profile" />
+    </fragment>
+</navigation>
