@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "330817396913",
+    "firebase_url": "https://touralbum-21eb3.firebaseio.com",
+    "project_id": "touralbum-21eb3",
+    "storage_bucket": "touralbum-21eb3.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:330817396913:android:8a230a9df40789a4aa8290",
+        "android_client_info": {
+          "package_name": "pt.aulasicm.touralbum"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "330817396913-b5a2mjmquep18irlcp3nbvuieam7heis.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCzNKceOhIZOHV6wEacgjXIlpw-k1Irupk"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "330817396913-b5a2mjmquep18irlcp3nbvuieam7heis.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
