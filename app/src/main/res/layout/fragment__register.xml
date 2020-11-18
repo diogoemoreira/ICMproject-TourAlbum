@@ -8,16 +8,16 @@
     tools:context=".Fragment_Register">
 
     <EditText
-        android:id="@+id/editTextTextPassword2"
+        android:id="@+id/confirm_pw_box"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/prompt_password"
         android:inputType="textPassword"
         android:textColorHint="#ACC6AD"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPassword"
+        app:layout_constraintEnd_toEndOf="@+id/pw_box"
         app:layout_constraintHorizontal_bias="0.0"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPassword"
+        app:layout_constraintStart_toStartOf="@+id/pw_box"
         app:layout_constraintTop_toBottomOf="@+id/textView7" />
 
     <TextView
@@ -30,7 +30,7 @@
         app:layout_constraintEnd_toEndOf="@+id/textView6"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView6"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/pw_box" />
 
     <TextView
         android:id="@+id/textView"
@@ -60,7 +60,7 @@
         app:layout_constraintTop_toBottomOf="@+id/textView" />
 
     <EditText
-        android:id="@+id/editTextTextEmailAddress"
+        android:id="@+id/email_box"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="4dp"
@@ -83,10 +83,10 @@
         app:layout_constraintEnd_toEndOf="@+id/textView2"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/textView2"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextEmailAddress" />
+        app:layout_constraintTop_toBottomOf="@+id/email_box" />
 
     <EditText
-        android:id="@+id/editTextTextPersonName"
+        android:id="@+id/username_box"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
@@ -94,8 +94,8 @@
         android:hint="Name"
         android:textColor="#ACC6AD"
         android:textColorHint="#ACC6AD"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextEmailAddress"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextEmailAddress"
+        app:layout_constraintEnd_toEndOf="@+id/email_box"
+        app:layout_constraintStart_toStartOf="@+id/email_box"
         app:layout_constraintTop_toBottomOf="@+id/textView3" />
 
     <TextView
@@ -107,18 +107,18 @@
         android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/textView3"
         app:layout_constraintStart_toStartOf="@+id/textView3"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPersonName" />
+        app:layout_constraintTop_toBottomOf="@+id/username_box" />
 
     <EditText
-        android:id="@+id/editTextTextPassword"
+        android:id="@+id/pw_box"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:ems="10"
         android:hint="@string/prompt_password"
         android:inputType="textPassword"
         android:textColorHint="#ACC6AD"
-        app:layout_constraintEnd_toEndOf="@+id/editTextTextPersonName"
-        app:layout_constraintStart_toStartOf="@+id/editTextTextPersonName"
+        app:layout_constraintEnd_toEndOf="@+id/username_box"
+        app:layout_constraintStart_toStartOf="@+id/username_box"
         app:layout_constraintTop_toBottomOf="@+id/textView6" />
 
     <Button
@@ -131,6 +131,6 @@
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/editTextTextPassword2" />
+        app:layout_constraintTop_toBottomOf="@+id/confirm_pw_box" />
 
 </androidx.constraintlayout.widget.ConstraintLayout>
