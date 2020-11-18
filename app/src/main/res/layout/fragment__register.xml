@@ -92,7 +92,6 @@
         android:ems="10"
         android:inputType="textPersonName"
         android:hint="Name"
-        android:textColor="#ACC6AD"
         android:textColorHint="#ACC6AD"
         app:layout_constraintEnd_toEndOf="@+id/email_box"
         app:layout_constraintStart_toStartOf="@+id/email_box"
