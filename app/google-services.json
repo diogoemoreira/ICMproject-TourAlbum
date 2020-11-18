@@ -1,34 +1,34 @@
 {
   "project_info": {
-    "project_number": "330817396913",
-    "firebase_url": "https://touralbum-21eb3.firebaseio.com",
-    "project_id": "touralbum-21eb3",
-    "storage_bucket": "touralbum-21eb3.appspot.com"
+    "project_number": "497352952476",
+    "firebase_url": "https://touralbum-4c0ec.firebaseio.com",
+    "project_id": "touralbum-4c0ec",
+    "storage_bucket": "touralbum-4c0ec.appspot.com"
   },
   "client": [
     {
       "client_info": {
-        "mobilesdk_app_id": "1:330817396913:android:8a230a9df40789a4aa8290",
+        "mobilesdk_app_id": "1:497352952476:android:088e134370ee1dd41d7b59",
         "android_client_info": {
           "package_name": "pt.aulasicm.touralbum"
         }
       },
       "oauth_client": [
         {
-          "client_id": "330817396913-b5a2mjmquep18irlcp3nbvuieam7heis.apps.googleusercontent.com",
+          "client_id": "497352952476-q7lo5rktv68m2bf1smi3atq68m47bshs.apps.googleusercontent.com",
           "client_type": 3
         }
       ],
       "api_key": [
         {
-          "current_key": "AIzaSyCzNKceOhIZOHV6wEacgjXIlpw-k1Irupk"
+          "current_key": "AIzaSyCyyvYYPGTS_vAeETCmxKPuL_bkae5Lne0"
         }
       ],
       "services": {
         "appinvite_service": {
           "other_platform_oauth_client": [
             {
-              "client_id": "330817396913-b5a2mjmquep18irlcp3nbvuieam7heis.apps.googleusercontent.com",
+              "client_id": "497352952476-q7lo5rktv68m2bf1smi3atq68m47bshs.apps.googleusercontent.com",
               "client_type": 3
             }
           ]

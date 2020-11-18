@@ -17,5 +17,9 @@
         android:id="@+id/fragment_Register"
         android:name="pt.aulasicm.touralbum.Fragment_Register"
         android:label="fragment__register"
-        tools:layout="@layout/fragment__register" />
+        tools:layout="@layout/fragment__register" >
+        <action
+            android:id="@+id/action_fragment_Register_to_fragment_Login"
+            app:destination="@id/fragment_Login" />
+    </fragment>
 </navigation>

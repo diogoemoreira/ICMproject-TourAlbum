@@ -5,6 +5,7 @@ import android.os.Bundle;
 
 import androidx.annotation.NonNull;
 import androidx.fragment.app.Fragment;
+import androidx.navigation.Navigation;
 
 import android.util.Log;
 import android.view.LayoutInflater;
@@ -49,6 +50,7 @@ public class Fragment_Register extends Fragment {
         {
             @Override
             public void onClick(View v) {
+                Context context = v.getContext();
                 String email=emailView.getText().toString();
                 String username=usernameView.getText().toString();
                 String pw=pwView.getText().toString();
@@ -62,18 +64,29 @@ public class Fragment_Register extends Fragment {
                      */
                     DatabaseReference myRef = database.getReference("/users");
                     User user = new User(username, email,pw);
-                    myRef.setValue("TESTING THIS SH*T").addOnFailureListener(e -> Log.d("HAAAAAAAAAAAAAAAA", e.getLocalizedMessage()));
+                    myRef.setValue(user, new DatabaseReference.CompletionListener() {
+                        @Override
+                        public void onComplete(DatabaseError databaseError, DatabaseReference databaseReference) {
+                            if (databaseError != null) {
+                                System.out.println("Data could not be saved " + databaseError.getMessage());
+                            } else {
+                                System.out.println("Data saved successfully.");
+                            }
+                        }
+                    });
 
                     System.out.println("------------ADICIONOU À BD-----------");
+
+                    //Go back to login
+                    Navigation.findNavController(v).navigate(R.id.action_fragment_Register_to_fragment_Login);
+
                 }
                 else{
-                    Context context = v.getContext();
                     Toast toast = Toast.makeText(context,"The passwords do not match.", Toast.LENGTH_LONG);
                     toast.show();
                 }
             }
         });
-
         return view;
     }
 
