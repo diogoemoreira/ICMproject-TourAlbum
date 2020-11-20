@@ -8,7 +8,7 @@
     tools:context=".Fragment_Login">
 
     <EditText
-        android:id="@+id/LoginEmail"
+        android:id="@+id/login_email"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints=""
@@ -25,6 +25,7 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/email"
+        android:textSize="20sp"
         app:layout_constraintBottom_toBottomOf="parent"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.268"
@@ -37,13 +38,14 @@
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:text="@string/password"
+        android:textSize="20sp"
         app:layout_constraintEnd_toEndOf="@+id/tvLoginEmail"
         app:layout_constraintHorizontal_bias="0.0"
         app:layout_constraintStart_toStartOf="@+id/tvLoginEmail"
-        app:layout_constraintTop_toBottomOf="@+id/LoginEmail" />
+        app:layout_constraintTop_toBottomOf="@+id/login_email" />
 
     <EditText
-        android:id="@+id/LoginPassword"
+        android:id="@+id/login_pw"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:autofillHints=""
@@ -56,7 +58,7 @@
         app:layout_constraintTop_toBottomOf="@+id/tvLoginPassword" />
 
     <Button
-        android:id="@+id/button"
+        android:id="@+id/login_btn"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginTop="52dp"
@@ -66,7 +68,7 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.337"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/LoginPassword" />
+        app:layout_constraintTop_toBottomOf="@+id/login_pw" />
 
     <Button
         android:id="@+id/buttonLoginRegister"
@@ -75,8 +77,8 @@
         android:layout_marginStart="28dp"
         android:backgroundTint="#4CAF50"
         android:text="@string/register"
-        app:layout_constraintBaseline_toBaselineOf="@+id/button"
-        app:layout_constraintStart_toEndOf="@+id/button" />
+        app:layout_constraintBaseline_toBaselineOf="@+id/login_btn"
+        app:layout_constraintStart_toEndOf="@+id/login_btn" />
 
     <TextView
         android:id="@+id/textView"

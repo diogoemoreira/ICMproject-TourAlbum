@@ -29,3 +29,6 @@ An album of your travels around the world
 ## APIs (with points of interest)
     MapQuest
     OpenTripMap 
+
+## 20/11/2020
+    LOGIN/REGISTER -DONE 

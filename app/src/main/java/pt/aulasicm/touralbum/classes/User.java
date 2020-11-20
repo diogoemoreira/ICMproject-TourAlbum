@@ -1,4 +1,4 @@
-package pt.aulasicm.touralbum;
+package pt.aulasicm.touralbum.classes;
 
 import com.google.firebase.database.IgnoreExtraProperties;
 
@@ -17,6 +17,10 @@ public class User {
         this.username = username;
         this.email = email;
         this.pw=pw;
+    }
+    public User(String username, String email) {
+        this.username = username;
+        this.email = email;
     }
 
 }

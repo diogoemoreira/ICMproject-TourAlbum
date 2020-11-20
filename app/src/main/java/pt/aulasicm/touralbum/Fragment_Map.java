@@ -19,7 +19,6 @@ import com.google.android.gms.maps.model.MarkerOptions;
 public class Fragment_Map extends Fragment {
 
     private OnMapReadyCallback callback = new OnMapReadyCallback() {
-
         /**
          * Manipulates the map once available.
          * This callback is triggered when the map is ready to be used.
@@ -48,10 +47,12 @@ public class Fragment_Map extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
+        /*
         SupportMapFragment mapFragment =
                 (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
         if (mapFragment != null) {
             mapFragment.getMapAsync(callback);
         }
+         */
     }
 }
