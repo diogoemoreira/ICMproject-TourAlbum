@@ -1,7 +1,6 @@
-package pt.aulasicm.touralbum;
+package pt.aulasicm.touralbum.classes;
 
 import android.content.Context;
-import android.media.Image;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -13,7 +12,7 @@ import androidx.recyclerview.widget.RecyclerView;
 
 import java.util.LinkedList;
 
-import pt.aulasicm.touralbum.classes.GalleryItem;
+import pt.aulasicm.touralbum.R;
 
 public class GalleryItemAdapter   extends RecyclerView.Adapter<GalleryItemAdapter.PictureViewHolder>  {
     private LinkedList<GalleryItem> mPicsList;

@@ -1,11 +1,10 @@
-package pt.aulasicm.touralbum;
+package pt.aulasicm.touralbum.activities;
 
 import androidx.appcompat.app.AppCompatActivity;
-import androidx.fragment.app.Fragment;
-import androidx.navigation.NavController;
-import androidx.navigation.fragment.NavHostFragment;
 
 import android.os.Bundle;
+
+import pt.aulasicm.touralbum.R;
 
 public class LoginActivity extends AppCompatActivity {
 

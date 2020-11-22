@@ -1,4 +1,4 @@
-package pt.aulasicm.touralbum;
+package pt.aulasicm.touralbum.classes;
 
 import android.os.Bundle;
 
@@ -7,6 +7,8 @@ import androidx.fragment.app.Fragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
+
+import pt.aulasicm.touralbum.R;
 
 public class Gallery_Holder extends Fragment {
 
