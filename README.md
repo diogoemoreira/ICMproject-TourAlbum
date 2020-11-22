@@ -30,5 +30,3 @@ An album of your travels around the world
     MapQuest
     OpenTripMap 
 
-## 20/11/2020
-    LOGIN/REGISTER -DONE 

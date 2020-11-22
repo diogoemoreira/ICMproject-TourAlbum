@@ -9,7 +9,7 @@
 
     <fragment
         android:id="@+id/fragment_Login"
-        android:name="pt.aulasicm.touralbum.Fragment_Login"
+        android:name="pt.aulasicm.touralbum.fragments.Fragment_Login"
         android:label="fragment__login"
         tools:layout="@layout/fragment__login" >
         <action
@@ -21,7 +21,7 @@
     </fragment>
     <fragment
         android:id="@+id/fragment_Register"
-        android:name="pt.aulasicm.touralbum.Fragment_Register"
+        android:name="pt.aulasicm.touralbum.fragments.Fragment_Register"
         android:label="fragment__register"
         tools:layout="@layout/fragment__register" >
         <action

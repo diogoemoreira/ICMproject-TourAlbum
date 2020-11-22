@@ -6,38 +6,17 @@
     app:startDestination="@id/fragment_Profile">
     <fragment
         android:id="@+id/fragment_Profile"
-        android:name="pt.aulasicm.touralbum.Fragment_Profile"
+        android:name="pt.aulasicm.touralbum.fragments.Fragment_Profile"
         android:label="fragment__profile"
-        tools:layout="@layout/fragment__profile" >
-        <action
-            android:id="@+id/action_fragment_Profile_to_fragment_Gallery"
-            app:destination="@id/fragment_Gallery" />
-        <action
-            android:id="@+id/action_fragment_Profile_to_fragment_Map"
-            app:destination="@id/fragment_Map" />
-    </fragment>
+        tools:layout="@layout/fragment__profile" />
     <fragment
         android:id="@+id/fragment_Gallery"
-        android:name="pt.aulasicm.touralbum.Fragment_Gallery"
+        android:name="pt.aulasicm.touralbum.fragments.Fragment_Gallery"
         android:label="fragment__gallery"
-        tools:layout="@layout/fragment__gallery" >
-        <action
-            android:id="@+id/action_fragment_Gallery_to_fragment_Profile"
-            app:destination="@id/fragment_Profile" />
-        <action
-            android:id="@+id/action_fragment_Gallery_to_fragment_Map"
-            app:destination="@id/fragment_Map" />
-    </fragment>
+        tools:layout="@layout/fragment__gallery" />
     <fragment
         android:id="@+id/fragment_Map"
-        android:name="pt.aulasicm.touralbum.Fragment_Map"
+        android:name="pt.aulasicm.touralbum.fragments.Fragment_Map"
         android:label="fragment__map"
-        tools:layout="@layout/fragment__map" >
-        <action
-            android:id="@+id/action_fragment_Map_to_fragment_Gallery"
-            app:destination="@id/fragment_Gallery" />
-        <action
-            android:id="@+id/action_fragment_Map_to_fragment_Profile"
-            app:destination="@id/fragment_Profile" />
-    </fragment>
+        tools:layout="@layout/fragment__map" />
 </navigation>

@@ -1,4 +1,4 @@
-package pt.aulasicm.touralbum;
+package pt.aulasicm.touralbum.fragments;
 
 import androidx.annotation.NonNull;
 import androidx.annotation.Nullable;
@@ -15,6 +15,8 @@ import com.google.android.gms.maps.OnMapReadyCallback;
 import com.google.android.gms.maps.SupportMapFragment;
 import com.google.android.gms.maps.model.LatLng;
 import com.google.android.gms.maps.model.MarkerOptions;
+
+import pt.aulasicm.touralbum.R;
 
 public class Fragment_Map extends Fragment {
 

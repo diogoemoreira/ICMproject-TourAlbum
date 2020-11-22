@@ -1,7 +1,8 @@
-package pt.aulasicm.touralbum;
+package pt.aulasicm.touralbum.fragments;
 
 import android.app.Activity;
 import android.content.Context;
+import android.content.Intent;
 import android.os.Bundle;
 
 import androidx.annotation.NonNull;
@@ -19,11 +20,10 @@ import com.google.android.gms.tasks.OnCompleteListener;
 import com.google.android.gms.tasks.Task;
 import com.google.firebase.auth.AuthResult;
 import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseAuthMultiFactorException;
 import com.google.firebase.auth.FirebaseUser;
-import com.google.firebase.auth.MultiFactorResolver;
 
-import java.util.concurrent.Executor;
+import pt.aulasicm.touralbum.R;
+import pt.aulasicm.touralbum.activities.MainActivity2;
 
 
 public class Fragment_Login extends Fragment {
@@ -42,7 +42,11 @@ public class Fragment_Login extends Fragment {
     }
 
     private void updateUI(FirebaseUser currentUser,View v) {
-        Navigation.findNavController(v).navigate(R.id.action_fragment_Login_to_main_nav_graph);
+        Intent intent = new Intent(v.getContext(), MainActivity2.class);
+        System.out.println("LOGINNNN CURRENT USER");
+        System.out.println(currentUser);
+        intent.putExtra("user", currentUser);
+        startActivity(intent);
     }
 
     @Override

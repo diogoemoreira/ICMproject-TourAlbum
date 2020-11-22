@@ -1,4 +1,4 @@
-package pt.aulasicm.touralbum;
+package pt.aulasicm.touralbum.fragments;
 
 import android.app.Activity;
 import android.os.Bundle;
@@ -24,6 +24,10 @@ import com.google.firebase.database.DatabaseError;
 import com.google.firebase.database.DatabaseReference;
 import com.google.firebase.database.FirebaseDatabase;
 
+import java.security.MessageDigest;
+import java.security.NoSuchAlgorithmException;
+
+import pt.aulasicm.touralbum.R;
 import pt.aulasicm.touralbum.classes.User;
 
 public class Fragment_Register extends Fragment {
@@ -92,7 +96,6 @@ public class Fragment_Register extends Fragment {
                             Log.w("FEEDBACK SIGN IN ", "createUserWithEmail:failure", task.getException());
                             Toast.makeText(v.getContext(), "Authentication failed.",
                                     Toast.LENGTH_SHORT).show();
-                            updateUI(null);
                         }
                     }
                 });
@@ -100,9 +103,9 @@ public class Fragment_Register extends Fragment {
 
     private void AddUserToRealtimeDB(String email,String username) {
         DatabaseReference myRef = database.getReference("/users");
-        User user = new User(username, email);
+        User user = new User(username, md5(email));
 
-        myRef.child(username).setValue(user, (databaseError, databaseReference) -> {
+        myRef.child(md5(email)).setValue(user, (databaseError, databaseReference) -> {
             if (databaseError != null)
                 System.out.println("Data could not be saved " + databaseError.getMessage());
             else
@@ -112,5 +115,24 @@ public class Fragment_Register extends Fragment {
 
     private void updateUI(View v) {
         Navigation.findNavController(v).navigate(R.id.action_fragment_Register_to_fragment_Login);
+    }
+
+    public String md5(String s) {
+        try {
+            // Create MD5 Hash
+            MessageDigest digest = java.security.MessageDigest.getInstance("MD5");
+            digest.update(s.getBytes());
+            byte messageDigest[] = digest.digest();
+
+            // Create Hex String
+            StringBuffer hexString = new StringBuffer();
+            for (int i=0; i<messageDigest.length; i++)
+                hexString.append(Integer.toHexString(0xFF & messageDigest[i]));
+            return hexString.toString();
+
+        } catch (NoSuchAlgorithmException e) {
+            e.printStackTrace();
+        }
+        return "";
     }
 }
