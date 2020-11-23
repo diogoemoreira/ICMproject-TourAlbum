@@ -23,7 +23,7 @@ import com.google.firebase.auth.FirebaseAuth;
 import com.google.firebase.auth.FirebaseUser;
 
 import pt.aulasicm.touralbum.R;
-import pt.aulasicm.touralbum.activities.MainActivity2;
+import pt.aulasicm.touralbum.activities.MainActivity;
 
 
 public class Fragment_Login extends Fragment {
@@ -42,7 +42,7 @@ public class Fragment_Login extends Fragment {
     }
 
     private void updateUI(FirebaseUser currentUser,View v) {
-        Intent intent = new Intent(v.getContext(), MainActivity2.class);
+        Intent intent = new Intent(v.getContext(), MainActivity.class);
         System.out.println(currentUser);
         intent.putExtra("user", currentUser);
         startActivity(intent);
