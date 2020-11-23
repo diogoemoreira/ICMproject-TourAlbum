@@ -43,7 +43,6 @@ public class Fragment_Login extends Fragment {
 
     private void updateUI(FirebaseUser currentUser,View v) {
         Intent intent = new Intent(v.getContext(), MainActivity2.class);
-        System.out.println("LOGINNNN CURRENT USER");
         System.out.println(currentUser);
         intent.putExtra("user", currentUser);
         startActivity(intent);

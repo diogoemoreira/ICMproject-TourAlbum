@@ -49,12 +49,11 @@ public class Fragment_Map extends Fragment {
     @Override
     public void onViewCreated(@NonNull View view, @Nullable Bundle savedInstanceState) {
         super.onViewCreated(view, savedInstanceState);
-        /*
         SupportMapFragment mapFragment =
-                (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.map);
+                (SupportMapFragment) getChildFragmentManager().findFragmentById(R.id.fragment_Map);
         if (mapFragment != null) {
             mapFragment.getMapAsync(callback);
         }
-         */
+
     }
 }
