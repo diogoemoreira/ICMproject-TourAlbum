@@ -30,4 +30,5 @@
     <string name="achievements">Achievements:</string>
     <string name="locations_visited">Locations Visited:</string>
     <string name="imageDescription">Local/Data/BlaBla</string>
+    <string name="mapcamera">mapCamera</string>
 </resources>
