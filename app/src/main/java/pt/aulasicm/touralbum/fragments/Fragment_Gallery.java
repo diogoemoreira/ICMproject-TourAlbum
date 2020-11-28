@@ -63,7 +63,7 @@ public class Fragment_Gallery extends Fragment {
                              Bundle savedInstanceState) {
         // Inflate the layout for this fragment
         View v= inflater.inflate(R.layout.fragment__gallery, container, false);
-        getPermissionReadStorage();
+       // getPermissionReadStorage();
 
         mRecyclerView = v.findViewById(R.id.gallery);
         mRecyclerView.setLayoutManager(new LinearLayoutManager(v.getContext()));  // Give the RecyclerView a default layout manager.
@@ -99,6 +99,7 @@ public class Fragment_Gallery extends Fragment {
                         System.out.println(ref);
                         ref.getDownloadUrl().addOnSuccessListener(uri -> {
                            im.uri=uri;
+                            System.out.println(uri);
                            mPictureList.add(im);
                             mAdapter = new GalleryItemAdapter(getContext(), mPictureList);
                             mRecyclerView.setAdapter(mAdapter);
@@ -162,7 +163,7 @@ public class Fragment_Gallery extends Fragment {
         mPictureList.add(newItem);
     }
 
-
+/*
     private void getPermissionReadStorage() {
         // Here, thisActivity is the current activity
         if (ContextCompat.checkSelfPermission(getActivity(),
@@ -185,7 +186,7 @@ public class Fragment_Gallery extends Fragment {
             }
         }
     }
-
+*/
     private void ClearRecycler(){
         if(mPictureList !=null){
             mPictureList.clear();

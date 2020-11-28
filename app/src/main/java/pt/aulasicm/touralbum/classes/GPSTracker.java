@@ -20,7 +20,6 @@ import androidx.core.app.ActivityCompat;
 import static android.content.Context.LOCATION_SERVICE;
 
 public class GPSTracker extends Service implements LocationListener {
-    //https://gist.github.com/milon87/9c02159da06ce4a7a8487b928edc4b82?fbclid=IwAR1aI1BLKrYlApcesYTuGEznM8eABgRyPhWvClaQ19xwEI6T8_uYclwNEQU
 
     private final Context mContext;
 

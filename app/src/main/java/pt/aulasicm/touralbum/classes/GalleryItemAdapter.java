@@ -42,9 +42,8 @@ public class GalleryItemAdapter   extends RecyclerView.Adapter<GalleryItemAdapte
                  + "\nDescription: " + mCurrent.getDescription();
 
         //NOTA: escrever .setImage para ver outras possibilidades no autocomplete alem de URI. Exemplo: BITMAP
-        System.out.println("kkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkkk");
         //holder.pic.setImageURI(mCurrent.getUri());
-        Picasso.with(holder.itemView.getContext()).load(mCurrent.getUri()).into(holder.pic);
+        Picasso.with(holder.itemView.getContext()).load(mCurrent.getUri()).fit().into(holder.pic);
         holder.picInfo.setText(picInfo);
 
     }
@@ -63,7 +62,6 @@ public class GalleryItemAdapter   extends RecyclerView.Adapter<GalleryItemAdapte
             super(itemView);
             pic= itemView.findViewById(R.id.pic);
             picInfo=itemView.findViewById(R.id.picInfo);
-            System.out.println("AHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHHH");
             this.mAdapter = adapter;
         }
     }
