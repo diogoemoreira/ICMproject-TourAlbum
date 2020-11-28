@@ -28,6 +28,7 @@ import java.security.MessageDigest;
 import java.security.NoSuchAlgorithmException;
 
 import pt.aulasicm.touralbum.R;
+import pt.aulasicm.touralbum.classes.GalleryItem;
 import pt.aulasicm.touralbum.classes.User;
 
 public class Fragment_Register extends Fragment {
@@ -66,7 +67,6 @@ public class Fragment_Register extends Fragment {
         if(!email.equals("") && !username.equals("") && !pw.equals("") && !pw2.equals("") ){
             //Validate: password
             if(pw.equals(pw2)) {
-                //AddUser(v,username,email,pw);
                 AuthCreateUser(v,email,username,pw);
             }
             else{
@@ -94,8 +94,9 @@ public class Fragment_Register extends Fragment {
                         } else {
                             // If sign in fails, display a message to the user.
                             Log.w("FEEDBACK SIGN IN ", "createUserWithEmail:failure", task.getException());
-                            Toast.makeText(v.getContext(), "Authentication failed.",
-                                    Toast.LENGTH_SHORT).show();
+                            Toast.makeText(v.getContext(), "Authentication failed.\n Password must have atleast 6 charaters." +
+                                            "\n If that's not the case then check your connection. \n In the last case, the email you are trying to use might already in use",
+                                    Toast.LENGTH_LONG).show();
                         }
                     }
                 });
@@ -104,6 +105,8 @@ public class Fragment_Register extends Fragment {
     private void AddUserToRealtimeDB(String email,String username) {
         DatabaseReference myRef = database.getReference("/users");
         User user = new User(username, md5(email));
+        GalleryItem im1=new GalleryItem("LocationTest","DescriptionTest","DateTest","batataFrita");
+        user.Album.add(im1);
 
         myRef.child(md5(email)).setValue(user, (databaseError, databaseReference) -> {
             if (databaseError != null)

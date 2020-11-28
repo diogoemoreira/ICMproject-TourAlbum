@@ -10,6 +10,7 @@ import java.util.Date;
 public class GalleryItem {
 
     public Uri uri;
+    public String name;
     public String location;
     public String description;
     public String date;
@@ -18,10 +19,11 @@ public class GalleryItem {
         // Default constructor required for calls to DataSnapshot.getValue(User.class)
     }
 
-    public GalleryItem(String location,String description,String date) {
+    public GalleryItem(String location,String description,String date,String name) {
         this.location=location;
         this.description=description;
         this.date=date;
+        this.name=name;
     }
 
     //GETTERS

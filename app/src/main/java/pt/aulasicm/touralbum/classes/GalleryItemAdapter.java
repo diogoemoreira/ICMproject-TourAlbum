@@ -10,16 +10,19 @@ import android.widget.TextView;
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
 
+import com.squareup.picasso.Picasso;
+
+import java.util.ArrayList;
 import java.util.LinkedList;
 
 import pt.aulasicm.touralbum.R;
 
 public class GalleryItemAdapter   extends RecyclerView.Adapter<GalleryItemAdapter.PictureViewHolder>  {
-    private LinkedList<GalleryItem> mPicsList;
+    private ArrayList<GalleryItem> mPicsList;
     private LayoutInflater mInflater;
 
     public GalleryItemAdapter(Context context,
-                           LinkedList<GalleryItem> mPicsList) {
+                           ArrayList<GalleryItem> mPicsList) {
         mInflater = LayoutInflater.from(context);
         this.mPicsList = mPicsList;
     }
@@ -39,7 +42,8 @@ public class GalleryItemAdapter   extends RecyclerView.Adapter<GalleryItemAdapte
                  + "\nDescription: " + mCurrent.getDescription();
 
         //NOTA: escrever .setImage para ver outras possibilidades no autocomplete alem de URI. Exemplo: BITMAP
-        holder.pic.setImageURI(mCurrent.getUri());
+        //holder.pic.setImageURI(mCurrent.getUri());
+        Picasso.with(holder.itemView.getContext()).load(mCurrent.getUri()).fit().into(holder.pic);
         holder.picInfo.setText(picInfo);
 
     }

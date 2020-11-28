@@ -18,5 +18,13 @@
         android:id="@+id/fragment_Map"
         android:name="pt.aulasicm.touralbum.fragments.Fragment_Map"
         android:label="fragment__map"
-        tools:layout="@layout/fragment__map" />
+        tools:layout="@layout/fragment__map" >
+        <action
+            android:id="@+id/action_fragment_Map_to_fragment_Camera"
+            app:destination="@id/fragment_Camera" />
+    </fragment>
+    <fragment
+        android:id="@+id/fragment_Camera"
+        android:name="pt.aulasicm.touralbum.fragments.Fragment_Camera"
+        android:label="Fragment_Camera" />
 </navigation>

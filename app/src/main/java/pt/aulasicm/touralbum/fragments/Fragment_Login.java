@@ -68,13 +68,18 @@ public class Fragment_Login extends Fragment {
             EditText pwView=(EditText) view.findViewById(R.id.login_pw);
 
             //TODO: APAGAR ISTO QUE È APENAS PARA NAO TER TRABALHO A ESCREVER SEMPRE O MAIL
-            emailView.setText("fabio@gmail.com");
-            pwView.setText("a123456");
+            //emailView.setText("fabio@gmail.com");
+            //pwView.setText("a123456");
+            emailView.setText("diogo123@mail.com");
+            pwView.setText("123456");
             //TODO APAGAR ISTO QUE È APENAS PARA NAO TER TRABALHO A ESCREVER SEMPRE O MAIL
 
             String email=emailView.getText().toString();
             String pw=pwView.getText().toString();
-            ValidateCredentials(view,email,pw);
+            if(email!=null && pw!=null  && !email.equals("") & !pw.equals("")){
+                ValidateCredentials(view,email,pw);
+            }
+
         });
         return view;
     }
