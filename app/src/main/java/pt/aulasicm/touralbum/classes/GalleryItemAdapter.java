@@ -6,6 +6,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
 import android.widget.TextView;
+import android.widget.Toast;
 
 import androidx.annotation.NonNull;
 import androidx.recyclerview.widget.RecyclerView;
@@ -32,6 +33,15 @@ public class GalleryItemAdapter   extends RecyclerView.Adapter<GalleryItemAdapte
     @Override
     public GalleryItemAdapter.PictureViewHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
         View mItemView = mInflater.inflate(R.layout.gallerypic_item, parent, false);
+
+        View desc = mItemView.findViewById(R.id.picInfo);
+
+        desc.setOnLongClickListener(new View.OnLongClickListener() {
+            public boolean onLongClick(View arg0) {
+                Toast.makeText(mItemView.getContext(), "Long Clicked " , Toast.LENGTH_SHORT).show();
+                return false;
+            }
+        });
         return new PictureViewHolder(mItemView, this);
     }
     @Override
@@ -65,5 +75,7 @@ public class GalleryItemAdapter   extends RecyclerView.Adapter<GalleryItemAdapte
             this.mAdapter = adapter;
         }
     }
+
+
 }
 

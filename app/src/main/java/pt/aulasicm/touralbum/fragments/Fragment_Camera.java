@@ -81,7 +81,7 @@ public class Fragment_Camera extends Fragment {
     private String[] REQUIRED_PERMISSIONS = new String[]{"android.permission.CAMERA", "android.permission.WRITE_EXTERNAL_STORAGE"};
     TextureView textureView;
     View imageCapture;
-    
+
 
     @Nullable
     @Override
