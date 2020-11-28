@@ -14,16 +14,20 @@ public class GalleryItem {
     public String location;
     public String description;
     public String date;
+    public String myid;
+    public String stref;
 
     public GalleryItem() {
         // Default constructor required for calls to DataSnapshot.getValue(User.class)
     }
 
-    public GalleryItem(String location,String description,String date,String name) {
+    public GalleryItem(String location, String description, String date, String name, String myid, String stref) {
         this.location=location;
         this.description=description;
         this.date=date;
         this.name=name;
+        this.myid=myid;
+        this.stref=stref;
     }
 
     //GETTERS
@@ -31,4 +35,6 @@ public class GalleryItem {
     public String getLocation() { return location; }
     public String getDescription() { return description; }
     public String getDate() { return date; }
+    public String getMyid() {return myid; }
+    public String getStref() {return stref; }
 }

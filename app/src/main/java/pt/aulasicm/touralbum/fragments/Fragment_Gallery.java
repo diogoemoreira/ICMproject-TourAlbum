@@ -100,7 +100,7 @@ public class Fragment_Gallery extends Fragment {
                         ref.getDownloadUrl().addOnSuccessListener(uri -> {
                            im.uri=uri;
                             System.out.println(uri);
-                           mPictureList.add(im);
+                            mPictureList.add(im);
                             mAdapter = new GalleryItemAdapter(getContext(), mPictureList);
                             mRecyclerView.setAdapter(mAdapter);
                             mAdapter.notifyDataSetChanged();
