@@ -2,9 +2,11 @@ package pt.aulasicm.touralbum.classes;
 
 import android.content.Context;
 import android.view.LayoutInflater;
+import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
 import android.widget.ImageView;
+import android.widget.PopupMenu;
 import android.widget.TextView;
 import android.widget.Toast;
 
@@ -38,8 +40,22 @@ public class GalleryItemAdapter   extends RecyclerView.Adapter<GalleryItemAdapte
 
         desc.setOnLongClickListener(new View.OnLongClickListener() {
             public boolean onLongClick(View arg0) {
-                Toast.makeText(mItemView.getContext(), "Long Clicked " , Toast.LENGTH_SHORT).show();
-                return false;
+                //Creating the instance of PopupMenu
+                PopupMenu popup = new PopupMenu(mItemView.getContext(), desc);
+                //Inflating the Popup using xml file
+                popup.getMenuInflater().inflate(R.menu.popup_menu, popup.getMenu());
+
+                //registering popup with OnMenuItemClickListener
+                popup.setOnMenuItemClickListener(new PopupMenu.OnMenuItemClickListener() {
+
+                    @Override
+                    public boolean onMenuItemClick(MenuItem item) {
+                        Toast.makeText(mItemView.getContext(),"You Clicked : " + item.getTitle(), Toast.LENGTH_SHORT).show();
+                        return true;
+                    }
+                });
+                popup.show();//showing popup menu
+                return true;
             }
         });
         return new PictureViewHolder(mItemView, this);
