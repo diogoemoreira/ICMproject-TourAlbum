@@ -82,6 +82,7 @@ public class GalleryItemAdapter   extends RecyclerView.Adapter<GalleryItemAdapte
 
                                 dialogBuilder.setView(dialogView);
                                 dialogBuilder.show();break;
+
                             case "Delete":break;
                             case "Download":break;
                             default: Toast.makeText(mItemView.getContext(),"Oops something went wrong ", Toast.LENGTH_SHORT).show();
