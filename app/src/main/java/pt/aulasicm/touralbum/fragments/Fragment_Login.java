@@ -70,7 +70,7 @@ public class Fragment_Login extends Fragment {
             //TODO: APAGAR ISTO QUE È APENAS PARA NAO TER TRABALHO A ESCREVER SEMPRE O MAIL
             //emailView.setText("fabio@gmail.com");
             //pwView.setText("a123456");
-            emailView.setText("diogo123@mail.com");
+            emailView.setText("b@mail.com");
             pwView.setText("123456");
             //TODO APAGAR ISTO QUE È APENAS PARA NAO TER TRABALHO A ESCREVER SEMPRE O MAIL
 

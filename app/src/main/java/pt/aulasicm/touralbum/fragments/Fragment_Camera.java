@@ -224,7 +224,7 @@ public class Fragment_Camera extends Fragment {
                             progressDialog.dismiss();
                             Toast.makeText(getContext(), "Image Uploaded!!", Toast.LENGTH_SHORT).show();
                             try {
-                                AddToRealTimeDB(user, usernameRef, filename,ref);
+                                AddToRealTimeDB(user, usernameRef, filename);
                             } catch (IOException e) {
                                 e.printStackTrace();
                             }
@@ -250,14 +250,14 @@ public class Fragment_Camera extends Fragment {
         usernameRef.addListenerForSingleValueEvent(eventListener);
     }
 
-    private void AddToRealTimeDB(User user, DatabaseReference myRef, String filename, StorageReference stref) throws IOException {
+    private void AddToRealTimeDB(User user, DatabaseReference myRef, String filename) throws IOException {
         String pattern = "yyyy-MM-dd HH:mm";
         SimpleDateFormat simpleDateFormat = new SimpleDateFormat(pattern);
 
         String date = simpleDateFormat.format(new Date());
         System.out.println(date);
 
-        GalleryItem im1 = new GalleryItem(this.getAddress(), "Empty", date, filename,String.valueOf(user.Album.size()),stref.toString());
+        GalleryItem im1 = new GalleryItem(this.getAddress(), "Empty", date, filename,String.valueOf(user.Album.size()),user.email);
         user.Album.add(im1);
 
         myRef.setValue(user, (databaseError, databaseReference) -> {
