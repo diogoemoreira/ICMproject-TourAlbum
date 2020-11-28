@@ -94,20 +94,23 @@ public class Fragment_Gallery extends Fragment {
                     System.out.println(user.username);
                     for (GalleryItem im: user.Album){
                         // Get this pic from storage
-                        StorageReference ref = storageRef.child("images/users/"+ username + "/gallery/" + im.name);
+                        if(im!=null) {
+                            StorageReference ref = storageRef.child("images/users/" + username + "/gallery/" + im.name);
+                            System.out.println(ref);
+                            ref.getDownloadUrl().addOnSuccessListener(uri -> {
+                                im.uri=uri;
+                                System.out.println(uri);
+                                mPictureList.add(im);
+                                mAdapter = new GalleryItemAdapter(getContext(), mPictureList);
+                                mRecyclerView.setAdapter(mAdapter);
+                                mAdapter.notifyDataSetChanged();
 
-                        System.out.println(ref);
-                        ref.getDownloadUrl().addOnSuccessListener(uri -> {
-                           im.uri=uri;
-                            System.out.println(uri);
-                            mPictureList.add(im);
-                            mAdapter = new GalleryItemAdapter(getContext(), mPictureList);
-                            mRecyclerView.setAdapter(mAdapter);
-                            mAdapter.notifyDataSetChanged();
+                            }).addOnFailureListener(exception -> {
+                                System.out.println("Failed to retrieve Uri of this image");
+                            });
+                        }
 
-                        }).addOnFailureListener(exception -> {
-                            System.out.println("Failed to retrieve Uri of this image");
-                        });
+
                     }
                 }
             }
