@@ -1,10 +1,13 @@
 package pt.aulasicm.touralbum.classes;
 
+import android.app.AlertDialog;
 import android.content.Context;
 import android.view.LayoutInflater;
 import android.view.MenuItem;
 import android.view.View;
 import android.view.ViewGroup;
+import android.widget.Button;
+import android.widget.EditText;
 import android.widget.ImageView;
 import android.widget.PopupMenu;
 import android.widget.TextView;
@@ -51,6 +54,39 @@ public class GalleryItemAdapter   extends RecyclerView.Adapter<GalleryItemAdapte
                     @Override
                     public boolean onMenuItemClick(MenuItem item) {
                         Toast.makeText(mItemView.getContext(),"You Clicked : " + item.getTitle(), Toast.LENGTH_SHORT).show();
+
+                        switch(item.getTitle().toString()){
+                            case "Edit":
+                                //pop up for editing description
+                                final AlertDialog dialogBuilder = new AlertDialog.Builder(mItemView.getContext()).create();
+
+                                View dialogView = mInflater.inflate(R.layout.popup_change_desc, null);
+
+                                final EditText editText = (EditText) dialogView.findViewById(R.id.edt_comment);
+                                Button buttonSubmit = (Button) dialogView.findViewById(R.id.buttonSubmit);
+                                Button buttonCancel = (Button) dialogView.findViewById(R.id.buttonCancel);
+
+                                buttonCancel.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        dialogBuilder.dismiss();
+                                    }
+                                });
+                                buttonSubmit.setOnClickListener(new View.OnClickListener() {
+                                    @Override
+                                    public void onClick(View view) {
+                                        // Commit new Description
+                                        dialogBuilder.dismiss();
+                                    }
+                                });
+
+                                dialogBuilder.setView(dialogView);
+                                dialogBuilder.show();break;
+                            case "Delete":break;
+                            case "Download":break;
+                            default: Toast.makeText(mItemView.getContext(),"Oops something went wrong ", Toast.LENGTH_SHORT).show();
+                        }
+
                         return true;
                     }
                 });

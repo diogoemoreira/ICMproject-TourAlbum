@@ -105,8 +105,6 @@ public class Fragment_Register extends Fragment {
     private void AddUserToRealtimeDB(String email,String username) {
         DatabaseReference myRef = database.getReference("/users");
         User user = new User(username, md5(email));
-        GalleryItem im1=new GalleryItem("LocationTest","DescriptionTest","DateTest","batataFrita");
-        user.Album.add(im1);
 
         myRef.child(md5(email)).setValue(user, (databaseError, databaseReference) -> {
             if (databaseError != null)
